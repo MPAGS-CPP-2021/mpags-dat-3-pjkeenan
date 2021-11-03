@@ -5,6 +5,8 @@
 #include <string>
 #include <vector>
 
+#include "CipherMode.hpp"
+
 class CaesarCipher{
     public:
         // Create a new CaesarCipher instance using the given key
@@ -14,7 +16,7 @@ class CaesarCipher{
         explicit CaesarCipher(const std::string& key);
 
         // Add member function to (en/de)crypt a string
-        std::string applyCipher(const std::string& inputText, const bool encrypt) const;
+        std::string applyCipher(const std::string& inputText, const CipherMode cipherMode) const;
 
     private:
 

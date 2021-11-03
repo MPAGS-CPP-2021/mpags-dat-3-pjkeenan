@@ -4,10 +4,12 @@
 #include <string>
 #include <vector>
 
+#include "CipherMode.hpp"
+
 struct ProgramSettings {
     bool helpRequested; bool versionRequested;
     std::string inputFile; std::string outputFile;
-    std::string cipherKey; bool encrypt;
+    std::string cipherKey; CipherMode cipherMode;
 };
 
 bool processCommandLine(const std::vector<std::string>& cmdLineArgs, ProgramSettings& settings);
