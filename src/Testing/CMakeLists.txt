@@ -18,4 +18,10 @@ add_test(NAME test-catch COMMAND testCatch -s)
 add_executable(testTransformChar testTransformChar.cpp)
 target_include_directories(testTransformChar PRIVATE ${CMAKE_CURRENT_LIST_DIR})
 target_link_libraries(testTransformChar MPAGSCipher)
-add_test(NAME test-transformChar COMMAND testTransformChar)
+add_test(NAME test-transformChar COMMAND testTransformChar -s)
+
+# Test PorcessCommandLine
+add_executable(testProcessCommandLine testProcessCommandLine.cpp)
+target_include_directories(testProcessCommandLine PRIVATE ${CMAKE_CURRENT_LIST_DIR})
+target_link_libraries(testProcessCommandLine MPAGSCipher)
+add_test(NAME test-ProcessCommandLine COMMAND testProcessCommandLine -s)
